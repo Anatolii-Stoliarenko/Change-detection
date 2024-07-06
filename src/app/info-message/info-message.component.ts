@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TimeInterval } from 'rxjs/internal/operators/timeInterval';
 
 @Component({
   selector: 'app-info-message',
@@ -10,6 +11,7 @@ import { Component } from '@angular/core';
 export class InfoMessageComponent {
   get debugOutput() {
     console.log('[InfoMessages] "debugOutput" binding re-evaluated.');
+    // return Math.random().toString(); //makes mistake in the browther
     return 'InfoMessage Component Debug Output';
   }
 
